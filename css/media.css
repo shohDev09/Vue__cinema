@@ -1,0 +1,139 @@
+@media (max-width: 1440px) {}
+
+@media (max-width: 1320px) {}
+
+@media (max-width: 1290px) {}
+
+@media (max-width: 1170px) {}
+
+@media (max-width: 1140px) {}
+
+@media (max-width: 1024px) {
+    .films-cards {
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+
+    .films-card {
+        max-width: unset;
+        width: 48%;
+    }
+
+    .collections-cards {
+        scroll-snap-type: x mandatory;
+        overflow-x: auto;
+        padding-bottom: 20px;
+        column-gap: 20px;
+    }
+
+    .collections-card {
+        scroll-snap-align: center;
+        flex-shrink: 0;
+    }
+}
+
+/* Tab */
+@media (max-width: 992px) {}
+
+@media (max-width: 850px) {}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: flex;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav-menu__line {
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        display: block;
+        position: relative;
+    }
+
+    .nav-menu__line::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: -10px;
+        background: #fff;
+        transition: .5s;
+    }
+
+    .nav-menu__line::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 10px;
+        background: #fff;
+        transition: .5s;
+    }
+
+    .nav-list {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: var(--darkblue);
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index:-1;
+        transform: scale(0);
+        transition: .5s;
+    }
+    .nav-menu:hover  .nav-menu__line::before{
+        transform: rotate(45deg);
+        top: 0;
+    }
+    .nav-menu:hover  .nav-menu__line::after{
+        transform: rotate(-45deg);
+        top: 0;
+    }
+    .nav-menu:hover  .nav-menu__line {
+        background: transparent;
+    }
+    .nav-menu:hover ~ .nav-list{
+        transform: scale(1);
+    }
+    .films-cards {
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+
+    .films-card {
+        max-width: unset;
+        width: 46%;
+    }
+    .series-grid{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(3,1fr);
+    }
+    .series-card__md{
+        grid-column: span 4;
+    }
+}
+
+@media (max-width: 736px) {}
+
+@media (max-width: 684px) {}
+
+/* Mobile < 576 */
+@media (max-width: 576px) {}
+
+@media (max-width: 480px) {}
+
+@media (max-width: 412px) {}
+
+@media (max-width: 375px) {}
+
+@media (max-width: 360px) {}
